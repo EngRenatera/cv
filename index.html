@@ -34,6 +34,35 @@
     }
   </style>
 </head>
+<script>
+// Calcula o tempo entre duas datas
+function calculaTempo(inicio, fim = new Date()) {
+  const inicioDate = new Date(`${inicio}T00:00:00`);
+  const fimDate = new Date(fim);
+
+  if (isNaN(inicioDate.getTime()) || isNaN(fimDate.getTime())) {
+    console.error('Data inválida fornecida:', inicio, fim);
+    return 'Data inválida';
+  }
+
+  let anos = fimDate.getFullYear() - inicioDate.getFullYear();
+  let meses = fimDate.getMonth() - inicioDate.getMonth();
+
+  if (meses < 0) {
+    anos--;
+    meses += 12;
+  }
+  return `${anos} ano(s) e ${meses} mês(es)`;
+}
+
+// Atualiza no HTML
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('#boticario').textContent = calculaTempo('2020-12-01');
+  document.querySelector('#lyontech').textContent = calculaTempo('2019-12-01');
+  document.querySelector('#truework').textContent = calculaTempo('2019-07-01', '2020-12-01');
+  document.querySelector('#huawei').textContent = calculaTempo('2017-03-01', '2018-02-01');
+});
+</script>
 <body>
   <div class="container bg-white shadow p-5 rounded">
     <div class="text-center mb-4">
@@ -61,7 +90,7 @@
       <h4 class="section-title">Experiência Profissional</h4>
 
       <div>
-        <h5>Grupo Boticário <small class="text-muted">(Dez/2020 - Atual • 4 anos 4 meses)</small></h5>
+        <h5>Grupo Boticário <small class="text-muted">(<span id="boticario"></span>)</small></h5>
         <ul>
           <li class="job-title">Data Engineer Specialist (Jan/2025 - Atual)</li>
           <p>Gestão avançada de custos em GCP, desenvolvimento de pipelines ETL eficientes, dashboards analíticos e automações de forecast e detecção de anomalias de custos.</p>
@@ -78,7 +107,7 @@
       </div>
 
       <div>
-        <h5>Lyon Tech <small class="text-muted">(Dez/2019 - Atual • 5 anos 4 meses)</small></h5>
+        <h5>Lyon Tech <small class="text-muted">(<span id="lyontech"></span>)</small></h5>
         <ul>
           <li class="job-title">Fundador & Consultor em Dados e BI</li>
           <p>Consultoria especializada na criação de soluções personalizadas em engenharia de dados, ETL, automação e visualização avançada de dados para clientes diversos.</p>
@@ -86,7 +115,7 @@
       </div>
 
       <div>
-        <h5>TRUE WORK Consultoria <small class="text-muted">(Jul/2019 - Dez/2020 • 1 ano 6 meses)</small></h5>
+        <h5>TRUE WORK Consultoria <small class="text-muted">(<span id="truework"></span>)</small></h5>
         <ul>
           <li class="job-title">Desenvolvedor de Sistemas Embarcados e BI</li>
           <p>Desenvolvimento e manutenção de firmware, dashboards em Power BI, automação de tarefas e correção de falhas em sistemas embarcados utilizando Python.</p>
@@ -94,7 +123,7 @@
       </div>
 
       <div>
-        <h5>Huawei Technologies <small class="text-muted">(Mar/2017 - Fev/2018 • 1 ano)</small></h5>
+        <h5>Huawei Technologies <small class="text-muted">(<span id="huawei"></span>)</small></h5>
         <ul>
           <li class="job-title">Estagiário em Telecomunicações e R&D</li>
           <p>Implantação de soluções RF 3G/4G, suporte a equipes técnicas, ganhador de dois prêmios de melhor trainee.</p>
