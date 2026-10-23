@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Renato Trevizan - Currículo / Resume</title>
+  <title>Renato Trevizan - Resume / Currículo</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { background-color: #f4f7fa; padding-top: 30px; padding-bottom: 40px; color: #343a40; }
@@ -12,22 +12,28 @@
     .contact-info a { text-decoration: none; color: #0d6efd; }
     .job-title { font-weight: bold; color: #495057; }
     .lang-btn.active { background-color: #0d6efd; color: #fff; }
+    .cert-badges .badge { margin: 0.2rem; font-size: 0.85rem; white-space: normal; }
   </style>
 </head>
 <body>
   <!-- Language Toggle -->
   <div class="container text-end mb-3">
-    <button id="pt-btn" class="btn btn-sm lang-btn active">PT</button>
-    <button id="en-btn" class="btn btn-sm lang-btn">EN</button>
+    <button id="pt-btn" class="btn btn-sm lang-btn">PT</button>
+    <button id="en-btn" class="btn btn-sm lang-btn active">EN</button>
   </div>
 
   <!-- Portuguese Content -->
-  <div id="pt-content" class="container bg-white shadow p-5 rounded">
+  <div id="pt-content" class="container bg-white shadow p-5 rounded" style="display:none;">
     <!-- PT profile header -->
     <div class="text-center mb-4">
       <img src="renato.jpeg" class="profile-img mb-3" alt="Foto Renato">
       <h1>Renato Trevizan</h1>
-      <h5 class="text-muted">Engenheiro de Dados | Analytics Engineer | Google Professional Data Engineer</h5>
+      <h5 class="text-muted">Senior Data Engineer | Analytics Engineer | 3× Google Cloud Certified</h5>
+      <div class="cert-badges mt-3">
+        <span class="badge bg-primary">Google Cloud Professional Data Engineer</span>
+        <span class="badge bg-primary">Google Cloud Generative AI Leader</span>
+        <span class="badge bg-primary">Google Cloud Associate Cloud Engineer</span>
+      </div>
     </div>
     <!-- PT contact -->
     <div class="text-center contact-info mb-4">
@@ -40,7 +46,7 @@
     <!-- PT summary -->
     <div class="mb-4">
       <h4 class="section-title">Resumo Profissional</h4>
-      <p>Engenheiro de Dados certificado pelo Google, com graduação em Engenharia Elétrica pela UFPR e MBA em Business Intelligence pela Universidade Positivo. Mais de 5 anos de experiência na criação e gestão de soluções avançadas em dados e analytics, focado em transformação digital e otimização de processos. Especializado em plataformas modernas como Google Cloud Platform, Apache Airflow e BigQuery.</p>
+      <p>Engenheiro de Dados com graduação em Engenharia Elétrica/Computação pela UFPR e MBA em Business Intelligence pela Universidade Positivo. Mais de 5 anos de experiência prática em engenharia de dados e analytics, especializado em pipelines escaláveis, otimização de custos em nuvem e entrega de insights que apoiam decisões estratégicas. Ajudo organizações a usar o Google Cloud Platform (GCP) para transformar dados brutos em valor de negócio. Atuo também na plataforma de IA generativa, convertendo o tráfego de agentes e LLMs em métricas confiáveis e visibilidade operacional.</p>
     </div>
     <!-- PT experience -->
     <div class="mb-4">
@@ -48,7 +54,9 @@
       <div>
         <h5>Grupo Boticário <small class="text-muted">(<span id="boticario"></span>)</small></h5>
         <ul>
-          <li class="job-title">Data Engineer Specialist (Jan/2025 - Atual)</li>
+          <li class="job-title">Analytics Engineer - GenAI (Dez/2025 - Atual)</li>
+          <p>Engenharia analítica da plataforma de IA generativa. Pipelines de observabilidade da ingestão ao consumo (Pub/Sub → staging → sensitive-raw → sensitive-trusted → refined). Modelagem de camadas no BigQuery para métricas da plataforma, monitoramento de agentes e datasets para o Looker. RLS, validações de qualidade e metadados para que produto, MLOps e negócio usem os dados de GenAI com segurança. Eventos da plataforma convertidos em KPIs de uso, qualidade, custo e adoção.</p>
+          <li class="job-title">Data Engineer Specialist (Jan/2025 - Dez/2025)</li>
           <p>Gestão avançada de custos em GCP, pipelines ETL, dashboards analíticos e automações de forecast e detecção de anomalias.</p>
           <li class="job-title">Data Engineer (Out/2022 - Jan/2025)</li>
           <p>Criação e manutenção de pipelines, análise de dados, dashboards interativos no Tableau e Looker.</p>
@@ -86,7 +94,9 @@
     <div class="mb-4">
       <h4 class="section-title">Certificações e Premiações</h4>
       <ul class="list-group">
-        <li class="list-group-item list-group-item-primary">🏅 Google Professional Data Engineer Certification</li>
+        <li class="list-group-item list-group-item-primary">Google Cloud Professional Data Engineer</li>
+        <li class="list-group-item list-group-item-primary">Google Cloud Generative AI Leader</li>
+        <li class="list-group-item list-group-item-primary">Google Cloud Associate Cloud Engineer</li>
         <li class="list-group-item">Astronomer Apache Airflow Fundamentals</li>
         <li class="list-group-item">Jenkins: Integração Contínua</li>
         <li class="list-group-item">Databases & SQL for Data Science (IBM)</li>
@@ -102,6 +112,11 @@
       <span class="badge bg-primary">Airflow</span>
       <span class="badge bg-primary">SQL</span>
       <span class="badge bg-primary">BigQuery</span>
+      <span class="badge bg-primary">Looker</span>
+      <span class="badge bg-primary">Pub/Sub</span>
+      <span class="badge bg-primary">Cloud Functions</span>
+      <span class="badge bg-primary">GenAI</span>
+      <span class="badge bg-primary">Data Modeling</span>
       <span class="badge bg-primary">Power BI</span>
       <span class="badge bg-primary">Tableau</span>
       <span class="badge bg-primary">ETL</span>
@@ -113,17 +128,23 @@
       <h4 class="section-title">Idiomas</h4>
       <ul>
         <li>Português (Nativo)</li>
-        <li>Inglês (Avançado)</li>
+        <li>Inglês (Profissional completo)</li>
+        <li>Espanhol (Profissional)</li>
       </ul>
     </div>
   </div>
 
   <!-- English Content -->
-  <div id="en-content" class="container bg-white shadow p-5 rounded" style="display:none;">
+  <div id="en-content" class="container bg-white shadow p-5 rounded">
     <div class="text-center mb-4">
       <img src="renato.jpeg" class="profile-img mb-3" alt="Photo of Renato">
       <h1>Renato Trevizan</h1>
-      <h5 class="text-muted">Data Engineer | Analytics Engineer | Google Professional Data Engineer</h5>
+      <h5 class="text-muted">Senior Data Engineer | Analytics Engineer | 3× Google Cloud Certified</h5>
+      <div class="cert-badges mt-3">
+        <span class="badge bg-primary">Google Cloud Professional Data Engineer</span>
+        <span class="badge bg-primary">Google Cloud Generative AI Leader</span>
+        <span class="badge bg-primary">Google Cloud Associate Cloud Engineer</span>
+      </div>
     </div>
     <div class="text-center contact-info mb-4">
       <p>
@@ -134,14 +155,16 @@
     </div>
     <div class="mb-4">
       <h4 class="section-title">Professional Summary</h4>
-      <p>Google-certified Data Engineer with a B.Sc. in Electrical Engineering from UFPR and an MBA in Business Intelligence from Universidade Positivo. Over 5 years of experience building and managing advanced data & analytics solutions focused on digital transformation and process optimization, specializing in GCP, Apache Airflow, and BigQuery.</p>
+      <p>Data Engineer with a degree in Electrical/Computer Engineering from UFPR and an MBA in Business Intelligence. With over 5 years of hands-on experience in data engineering and analytics, I specialize in building scalable data pipelines, optimizing cloud costs, and delivering data-driven insights that empower strategic decisions. I help organizations use Google Cloud Platform (GCP) to turn raw data into business value. I also work on the Generative AI platform, turning agent and LLM traffic into trusted metrics and operational visibility.</p>
     </div>
     <div class="mb-4">
       <h4 class="section-title">Work Experience</h4>
       <div>
         <h5>Grupo Boticário <small class="text-muted">(<span id="boticario-en"></span>)</small></h5>
         <ul>
-          <li class="job-title">Data Engineer Specialist (Jan/2025 - Present)</li>
+          <li class="job-title">Analytics Engineer - GenAI (Dec/2025 - Present)</li>
+          <p>Analytics engineering for the Generative AI platform. Observability pipelines from ingestion to consumption (Pub/Sub → staging → sensitive-raw → sensitive-trusted → refined). BigQuery layers for platform metrics, agent monitoring, and Looker-ready datasets. RLS, data-quality checks, and metadata so product, MLOps, and business teams can use GenAI data safely. Platform events translated into KPIs for usage, quality, cost, and adoption.</p>
+          <li class="job-title">Data Engineer Specialist (Jan/2025 - Dec/2025)</li>
           <p>Advanced cost management on GCP, efficient ETL pipelines, analytical dashboards, and automated cost forecasting & anomaly detection.</p>
           <li class="job-title">Data Engineer (Oct/2022 - Jan/2025)</li>
           <p>Built and maintained robust pipelines, performed complex data analyses, and created interactive Tableau & Looker dashboards.</p>
@@ -159,7 +182,11 @@
         </ul>
       </div>
       <div>
-        <h5>TRUE WORK Consultoria <small class="text-muted">(<span id="truework-en"></span>)</small></etc>
+        <h5>TRUE WORK Consultoria <small class="text-muted">(<span id="truework-en"></span>)</small></h5>
+        <ul>
+          <li class="job-title">Embedded Systems & BI Developer</li>
+          <p>Firmware, Power BI dashboards, automation, and embedded-system fixes with Python.</p>
+        </ul>
       </div>
     </div>
     <div class="mb-4">
@@ -173,7 +200,9 @@
     <div class="mb-4">
       <h4 class="section-title">Certifications & Awards</h4>
       <ul class="list-group">
-        <li class="list-group-item list-group-item-primary">🏅 Google Professional Data Engineer Certification</li>
+        <li class="list-group-item list-group-item-primary">Google Cloud Professional Data Engineer</li>
+        <li class="list-group-item list-group-item-primary">Google Cloud Generative AI Leader</li>
+        <li class="list-group-item list-group-item-primary">Google Cloud Associate Cloud Engineer</li>
         <li class="list-group-item">Astronomer Apache Airflow Fundamentals</li>
         <li class="list-group-item">Jenkins: Continuous Integration</li>
         <li class="list-group-item">Databases & SQL for Data Science (IBM)</li>
@@ -188,6 +217,11 @@
       <span class="badge bg-primary">Airflow</span>
       <span class="badge bg-primary">SQL</span>
       <span class="badge bg-primary">BigQuery</span>
+      <span class="badge bg-primary">Looker</span>
+      <span class="badge bg-primary">Pub/Sub</span>
+      <span class="badge bg-primary">Cloud Functions</span>
+      <span class="badge bg-primary">GenAI</span>
+      <span class="badge bg-primary">Data Modeling</span>
       <span class="badge bg-primary">Power BI</span>
       <span class="badge bg-primary">Tableau</span>
       <span class="badge bg-primary">ETL</span>
@@ -198,12 +232,13 @@
       <h4 class="section-title">Languages</h4>
       <ul>
         <li>Portuguese (Native)</li>
-        <li>English (Advanced)</li>
+        <li>English (Full Professional)</li>
+        <li>Spanish (Professional Working)</li>
       </ul>
     </div>
   </div>
   <footer class="text-center mt-3">
-    <small>© 2025 Renato Trevizan</small>
+    <small>© 2026 Renato Trevizan</small>
   </footer>
   <script>
     function safeSetText(id, value) {
@@ -211,12 +246,13 @@
       if (el) el.textContent = value;
     }
     function updateDurations() {
-      safeSetText('boticario', calculaTempo('2020-12-01'));
-      safeSetText('lyontech', calculaTempo('2019-12-01'));
-      safeSetText('truework', calculaTempo('2019-07-01','2020-12-01'));
-      safeSetText('boticario-en', calculaTempo('2020-12-01'));
-      safeSetText('lyontech-en', calculaTempo('2019-12-01'));
-      safeSetText('truework-en', calculaTempo('2019-07-01','2020-12-01'));
+      const now = new Date();
+      safeSetText('boticario', calculaTempo('2020-12-01', now, 'pt'));
+      safeSetText('lyontech', calculaTempo('2019-12-01', now, 'pt'));
+      safeSetText('truework', calculaTempo('2019-07-01', '2020-12-01', 'pt'));
+      safeSetText('boticario-en', calculaTempo('2020-12-01', now, 'en'));
+      safeSetText('lyontech-en', calculaTempo('2019-12-01', now, 'en'));
+      safeSetText('truework-en', calculaTempo('2019-07-01', '2020-12-01', 'en'));
     }
     document.addEventListener('DOMContentLoaded', () => {
       updateDurations();
@@ -237,14 +273,14 @@
         ptBtn.classList.remove('active');
       });
     });
-    // calculaTempo remains unchanged
-    function calculaTempo(inicio, fim = new Date()) {
+    function calculaTempo(inicio, fim = new Date(), lang = 'en') {
       const inicioDate = new Date(`${inicio}T00:00:00`);
-      const fimDate = new Date(fim);
+      const fimDate = typeof fim === 'string' ? new Date(`${fim}T00:00:00`) : new Date(fim);
       let anos = fimDate.getFullYear() - inicioDate.getFullYear();
       let meses = fimDate.getMonth() - inicioDate.getMonth();
       if (meses < 0) { anos--; meses += 12; }
-      return `${anos} ano(s) e ${meses} mês(es)`;
+      if (lang === 'pt') return `${anos} ano(s) e ${meses} mês(es)`;
+      return `${anos} year(s) and ${meses} month(s)`;
     }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
